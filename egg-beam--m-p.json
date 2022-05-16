@@ -30,21 +30,21 @@
     "variables": [
         {
             "name": "Cars",
-            "description": "Maximum amount of cars per player. Can be either 1 or 2",
+            "description": "Maximum amount of cars per player. Can be either 1 to 5",
             "env_variable": "CARS",
             "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|int|min:1|max:2"
+            "rules": "required|int|min:1|max:5"
         },
         {
             "name": "Max players",
-            "description": "Maximum amount of players that can join the server.\r\nValue between 1 and 10",
+            "description": "Maximum amount of players that can join the server.\r\nValue between 1 and 20",
             "env_variable": "MAXPLAYERS",
-            "default_value": "5",
+            "default_value": "20",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|int|min:1|max:10"
+            "rules": "required|int|min:1|max:20"
         },
         {
             "name": "Map",
@@ -53,7 +53,7 @@
             "default_value": "\/levels\/gridmap_v2\/info.json",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:40"
+            "rules": "required|string|max:255"
         },
         {
             "name": "Name",
@@ -62,25 +62,25 @@
             "default_value": "BeamMP Server",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:25"
+            "rules": "required|string|max:350"
         },
         {
             "name": "Description",
             "description": "Description for your server!",
             "env_variable": "DESC",
-            "default_value": "Description for your server!",
+            "default_value": "BeamMP Server Description",
             "user_viewable": true,
-            "user_editable": false,
-            "rules": "required|string|max:300"
+            "user_editable": true,
+            "rules": "required|string|max:500"
         },
         {
             "name": "Authentication Key",
-            "description": "BeamMP's Server Authentication key. See documentation for more information",
+            "description": "BeamMP's Server Authentication key. See documentation for more information - https://wiki.beammp.com/en/home/server-installation",
             "env_variable": "AUTH",
             "default_value": "-",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:50"
+            "rules": "required|string|max:64"
         },
         {
             "name": "Private",
@@ -96,18 +96,18 @@
             "description": "Run the server in debug mode? Value must be true or false",
             "env_variable": "DEBUG",
             "default_value": "false",
-            "user_viewable": false,
-            "user_editable": false,
+            "user_viewable": true,
+            "user_editable": true,
             "rules": "required|string|in:true,false"
         },
         {
             "name": "Resource",
             "description": "Resource folder location",
             "env_variable": "RESOURCE",
-            "default_value": "\"Resources\"",
-            "user_viewable": false,
+            "default_value": "Resources",
+            "user_viewable": true,
             "user_editable": false,
-            "rules": "required|string|max:50"
+            "rules": "required|string|max:128"
         }
     ]
 }
